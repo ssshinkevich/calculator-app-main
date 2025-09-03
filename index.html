@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="JsCalc">
+  <link rel="apple-touch-icon" href="./images/free-icon-calculate-6421344.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body class="theme-1">
+  <div class="calculator">
+    <div class="calculator__topbar">
+      <div class="calculator__brand">calc</div>
+      <div class="calculator__theme-switcher">
+        <span>THEME</span>
+        <div class="calculator__switcher">
+          <ul class="calculator__chose-theme">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          <div class="calculator__switcher-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calculator__screen">
+      <div id="screen-history"></div>
+      <div id="screen-main">0</div>
+    </div>
+
+    <div class="calculator__pad">
+      <button class="calculator__key calculator__key--digit" type="button">7</button>
+      <button class="calculator__key calculator__key--digit" type="button">8</button>
+      <button class="calculator__key calculator__key--digit" type="button">9</button>
+      <button class="calculator__key calculator__key--delete" type="button">DEL</button>
+
+      <button class="calculator__key calculator__key--digit" type="button">4</button>
+      <button class="calculator__key calculator__key--digit" type="button">5</button>
+      <button class="calculator__key calculator__key--digit" type="button">6</button>
+      <button class="calculator__key calculator__key--operator" type="button">+</button>
+
+      <button class="calculator__key calculator__key--digit" type="button">1</button>
+      <button class="calculator__key calculator__key--digit" type="button">2</button>
+      <button class="calculator__key calculator__key--digit" type="button">3</button>
+      <button class="calculator__key calculator__key--operator" type="button">-</button>
+
+      <button class="calculator__key calculator__key--decimal" type="button">.</button>
+      <button class="calculator__key calculator__key--digit" type="button">0</button>
+      <button class="calculator__key calculator__key--operator" type="button">/</button>
+      <button class="calculator__key calculator__key--operator" type="button">x</button>
+
+      <button class="calculator__key calculator__key--reset" type="button">RESET</button>
+      <button class="calculator__key calculator__key--equals" type="button">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

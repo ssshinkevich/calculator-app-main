@@ -1,0 +1,20 @@
+{
+  "name": "Calculator JS",
+  "short_name": "JsCalc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#222831",
+  "theme_color": "#ff4d4d",
+  "icons": [
+    {
+      "src": "./images/free-icon-calculate-6421344.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/free-icon-calculate-6421344.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

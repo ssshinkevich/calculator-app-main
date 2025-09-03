@@ -1,0 +1,253 @@
+:root {
+  --font: "League Spartan", sans-serif;
+  --circle-left: 0.8rem;
+}
+
+body.theme-1 {
+  --main-background: hsl(222, 26%, 31%);
+  --toggle-keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+
+  --key-background: hsl(0, 0%, 90%);
+  --key-shadow: hsl(28, 16%, 65%);
+
+  --action-key-background: hsl(225, 21%, 49%);
+  --action-key-shadow: hsl(224, 28%, 35%);
+
+  --equal-key-background: hsl(6, 63%, 50%);
+  --equal-key-shadow: hsl(6, 70%, 34%);
+
+  --text-color: hsl(0, 100%, 100%);
+  --text-key-color: hsl(221, 14%, 31%);
+  --display-text-color: hsl(0, 100%, 100%);
+}
+
+body.theme-2 {
+  --main-background: hsl(0, 0%, 90%);
+  --toggle-keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --key-background: hsl(0, 0%, 100%);
+  --key-shadow: hsl(35, 11%, 61%);
+
+  --action-key-background: hsl(185, 42%, 37%);
+  --action-key-shadow: hsl(185, 58%, 25%);
+
+  --equal-key-background: hsl(25, 98%, 40%);
+  --equal-key-shadow: hsl(25, 99%, 27%);
+
+  --text-color: hsl(60, 10%, 19%);
+  --display-text-color: hsl(60, 10%, 19%);
+}
+
+body.theme-3 {
+  --main-background: hsl(268, 75%, 9%);
+  --toggle-keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  --key-background: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+
+  --action-key-background: hsl(281, 89%, 26%);
+  --action-key-shadow: hsl(285, 91%, 52%);
+
+  --equal-key-background: hsl(176, 100%, 44%);
+  --equal-key-shadow: hsl(177, 92%, 70%);
+
+  --text-color: hsl(52, 100%, 62%);
+  --display-text-color: hsl(52, 100%, 62%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--main-background);
+  color: var(--text-color);
+
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 32px;
+
+  padding: 0.5rem;
+
+  transition: background 0.3s, color 0.3s;
+}
+
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 90vh;
+  width: 30%;
+}
+
+.calculator__topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calculator__theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  gap: 1.5rem;
+}
+
+.calculator__theme-switcher span {
+  margin-top: 1.2rem;
+}
+
+.calculator__switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.calculator__chose-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 0.8rem;
+}
+
+.calculator__switcher-body {
+  position: relative;
+  background-color: var(--toggle-keypad-background);
+  height: 1.3rem;
+  width: 4rem;
+  border-radius: 0.8rem;
+}
+
+.calculator__switcher-body::after {
+  content: '';
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: var(--equal-key-background);
+  border-radius: 50%;
+
+  top: 50%;
+  left: var(--circle-left);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: left 0.3s ease, background-color 0.3s;
+}
+
+.calculator__screen {
+  background-color: var(--screen-background);
+  color: var(--display-text-color);
+
+  min-height: 8rem;
+  width: 100%;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding: 1rem;
+  gap: 0.5rem;
+
+  overflow: hidden;
+}
+
+#screen-history {
+  font-size: 20px;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+#screen-main {
+  font-size: 52px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.calculator__pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--toggle-keypad-background);
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.calculator__key {
+  border: none;
+  border-radius: 0.7rem;
+  min-height: 3.5rem;
+  background-color: var(--key-background);
+  color: var(--text-key-color);
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px 0px var(--key-shadow);
+  transition: background 0.2s;
+}
+
+.calculator__key:active {
+  filter: brightness(1.2);
+}
+
+.calculator__key--reset {
+  grid-column: 1/3;
+  background-color: var(--action-key-background);
+  color: #fff;
+  box-shadow: 0px 5px 0px 0px var(--action-key-shadow);
+}
+
+.calculator__key--delete {
+  background-color: var(--action-key-background);
+  color: #fff;
+  box-shadow: 0px 5px 0px 0px var(--action-key-shadow);
+}
+
+.calculator__key--equals {
+  grid-column: 3/5;
+  background-color: var(--equal-key-background);
+  color: #fff;
+  box-shadow: 0px 5px 0px 0px var(--equal-key-shadow);
+}
+
+@media(max-width: 480px) {
+    .calculator {
+        width: 95%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .calculator {
+        width: 70%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .calculator {
+        width: 50%;
+    }
+}
