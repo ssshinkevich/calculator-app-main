@@ -18,5 +18,6 @@
 - OS: MacOS Tahoe
 - Browser: Google Chrome ( latest )
 - Resolution: 1600 x 900
+
 **Серьезность:** Critical ( Фундаментальная ошибка логики вычислений )
 **Приоритет:** Critical ( Требует немедленного исправления )
